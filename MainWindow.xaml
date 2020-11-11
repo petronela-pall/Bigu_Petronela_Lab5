@@ -23,25 +23,33 @@ Source={StaticResource phoneNumbersDataSet}}"/>
     </Window.Resources>
     <Grid x:Name="grdMain" Loaded="grdMain_Loaded">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="61*"/>
-            <ColumnDefinition Width="185*"/>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="258*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="47,75,0,0" VerticalAlignment="Top" Height="18" Width="67" RenderTransformOrigin="0.552,2.224" Click="btnNew_Click"/>
-        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="47,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.278" Height="23" Width="67" Click="btnEdit_Click"/>
-        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="47,170,0,0" VerticalAlignment="Top" Width="67" Click="btnDelete_Click"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="106,378,0,0" VerticalAlignment="Top" IsEnabled="False" Height="20" Width="86" Grid.Column="1" Click="btnSave_Click"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="59,377,0,0" VerticalAlignment="Top" Height="21" Width="79" IsEnabled="False" Grid.Column="3" Click="btnCancel_Click"/>
-        <ListBox x:Name="lstPhones" Grid.Column="1" SelectionChanged="ListBox_SelectionChanged" Margin="51,0,45,147" Height="233" VerticalAlignment="Bottom" Grid.ColumnSpan="3" ItemsSource="{Binding}"
+        <Button x:Name="btnNew" Content="New" HorizontalAlignment="Left" Margin="34,75,0,0" VerticalAlignment="Top" Height="18" Width="67" RenderTransformOrigin="0.552,2.224" Click="btnNew_Click" Grid.Column="1"/>
+        <Button x:Name="btnEdit" Content="Edit" HorizontalAlignment="Left" Margin="34,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.644,0.278" Height="23" Width="67" Click="btnEdit_Click" Grid.Column="1"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="34,170,0,0" VerticalAlignment="Top" Width="67" Click="btnDelete_Click" Grid.Column="1"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="62,388,0,0" VerticalAlignment="Top" IsEnabled="False" Height="20" Width="86" Grid.Column="2" Click="btnSave_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="164,388,0,0" VerticalAlignment="Top" Height="21" Width="79" IsEnabled="False" Grid.Column="5" Click="btnCancel_Click"/>
+        <ListBox x:Name="lstPhones" Grid.Column="2" SelectionChanged="ListBox_SelectionChanged" Margin="51,0,19,203" Height="177" VerticalAlignment="Bottom" Grid.ColumnSpan="4" ItemsSource="{Binding}"
 IsSynchronizedWithCurrentItem="True" ItemTemplate="{StaticResource ResourceKey=PhoneNumbersTemplate}"/>
-        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="47,267,0,0" VerticalAlignment="Top" Height="39" Width="65" FontWeight="Bold" Click="btnExit_Click"/>
-        <Button x:Name="btnNext" Content="Next" Grid.Column="3" HorizontalAlignment="Left" Margin="168,296,0,0" VerticalAlignment="Top" Width="71" Click="btnNext_Click"/>
-        <Button x:Name="btnPrevious" Content="Previous" Grid.Column="1" HorizontalAlignment="Left" Margin="51,296,0,0" VerticalAlignment="Top" Width="74" Click="btnPrevious_Click"/>
-        <Label x:Name="lblPhoneNum" Content="PhoneNumber:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,316,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSubscriber" Content="Subscriber:" Grid.Column="1" HorizontalAlignment="Left" Margin="175,342,0,0" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="txtPhoneNumber" Grid.Column="1" HorizontalAlignment="Left" Margin="304,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False" Grid.ColumnSpan="3" Text="{Binding Path=Phonenum}"/>
-        <TextBox x:Name="txtSubscriber" Grid.Column="1" HorizontalAlignment="Left" Margin="304,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False" Grid.ColumnSpan="3" Text="{Binding Path=Subscriber}"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="34,267,0,0" VerticalAlignment="Top" Height="39" Width="65" FontWeight="Bold" Click="btnExit_Click" Grid.Column="1"/>
+        <Button x:Name="btnNext" Content="Next" Grid.Column="5" HorizontalAlignment="Left" Margin="168,252,0,0" VerticalAlignment="Top" Width="71" Click="btnNext_Click"/>
+        <Button x:Name="btnPrevious" Content="Previous" Grid.Column="2" HorizontalAlignment="Left" Margin="51,252,0,0" VerticalAlignment="Top" Width="74" Click="btnPrevious_Click"/>
+        <Label x:Name="lblPhoneNum" Content="PhoneNumber:" Grid.Column="2" HorizontalAlignment="Left" Margin="175,280,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblSubscriber" Content="Subscriber:" Grid.Column="2" HorizontalAlignment="Left" Margin="175,306,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtPhoneNumber" Grid.Column="3" HorizontalAlignment="Left" Margin="77,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False" Grid.ColumnSpan="3" Text="{Binding Path=Phonenum}"/>
+        <TextBox x:Name="txtSubscriber" Grid.Column="3" HorizontalAlignment="Left" Margin="77,314,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False" Grid.ColumnSpan="3" Text="{Binding Path=Subscriber}"/>
+        <Label x:Name="lblContractValue" Content="ContractValue:" Grid.Column="2" HorizontalAlignment="Left" Margin="175,337,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.534,0.656" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtContractValue" Grid.ColumnSpan="3" Grid.Column="3" HorizontalAlignment="Left" Margin="77,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False"/>
+        <Label x:Name="lblContractDate" Content="ContractDate:" Grid.Column="2" HorizontalAlignment="Left" Margin="175,368,0,0" VerticalAlignment="Top" Width="90" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtContractDate" Grid.ColumnSpan="3" Grid.Column="3" HorizontalAlignment="Left" Margin="77,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" IsEnabled="False"/>
 
     </Grid>
 </Window>
